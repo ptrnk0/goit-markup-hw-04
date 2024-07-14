@@ -171,12 +171,15 @@ button {
 
 /* Order section */
 
+.team-container {
+    max-width: 1440рх;
+}
+
 .order-container {
     padding: 188px 0;
     background: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
-    max-width: 1440рх;
     background-size: cover;
     background-position: center;
 }
@@ -232,7 +235,7 @@ button {
 
 .advantages-item-container {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     padding: 24px 0;
     border: 1px solid #8e8f99;
@@ -343,8 +346,7 @@ button {
 
 .team-social-list a:hover,
 .team-social-list a:focus {
-    background-color: #31d0aa;
-    ;
+    background-color: #404bbf;
 }
 
 /* Portfolio section */
