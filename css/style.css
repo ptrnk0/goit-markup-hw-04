@@ -103,6 +103,20 @@ button {
     align-items: center;
 }
 
+.active-list-item .navigation {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 16px;
+    padding-bottom: 0;
+}
+
+.active-list-item .navigation::after {
+    content: "";
+    border: 4px solid #404bbf;
+    border-radius: 2px;
+}
+
 .navigation {
     display: block;
     font-weight: 500;
@@ -111,6 +125,9 @@ button {
     letter-spacing: 0.02em;
     color: #2e2f42;
     padding: 24px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation:focus,
@@ -138,6 +155,9 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-info:focus,
@@ -150,6 +170,9 @@ button {
 .order-container {
     padding: 188px 0;
     background: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-size: 1440рх;
 }
 
 .title-text {
@@ -176,26 +199,44 @@ button {
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 169px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-button:focus,
 .title-button:hover {
-    background: #404bbf;
+    background-color: #404bbf;
 }
 
 /* Advantages section */
+
+.advantages-container {
+    padding: 120px 0;
+}
 
 .advantages-list {
     display: flex;
     gap: 24px;
 }
 
-.advantages-container {
-    padding: 120px 0;
-}
-
 .advantages-list-item {
     width: calc((100% - 24px) / 3);
+}
+
+.advantages-item-container {
+    padding: 24px 0;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+}
+
+.advantages-item-container svg {
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+    height: 64px;
 }
 
 .advantages-title {
