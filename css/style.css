@@ -76,6 +76,7 @@ button {
 
 .header-box {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -104,17 +105,20 @@ button {
 }
 
 .active-list-item .navigation {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    gap: 16px;
-    padding-bottom: 0;
+    position: relative;
+    color: #404bbf;
 }
 
 .active-list-item .navigation::after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    background-color: #404bbf;
     content: "";
-    border: 4px solid #404bbf;
     border-radius: 2px;
+
 }
 
 .navigation {
@@ -172,7 +176,9 @@ button {
     background: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
-    background-size: 1440рх;
+    max-width: 1440рх;
+    background-size: cover;
+    background-position: center;
 }
 
 .title-text {
@@ -225,18 +231,20 @@ button {
 }
 
 .advantages-item-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
     padding: 24px 0;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     background-color: #f4f4fd;
     margin-bottom: 8px;
+    height: 112px;
 }
 
 .advantages-item-container svg {
     margin: 0 auto;
     display: block;
-    width: 64px;
-    height: 64px;
 }
 
 .advantages-title {
@@ -318,13 +326,13 @@ button {
 
 .team-social-list svg {
     display: block;
-    width: 16px;
-    height: 16px;
     fill: #f4f4fd;
 }
 
 .team-social-list a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #4d5ae5;
     border-radius: 50%;
     padding: 12px;
@@ -370,8 +378,7 @@ button {
 }
 
 .portfolio-example-text {
-    padding: 0 32px;
-    padding-top: 40px;
+    padding: 40px 32px;
     position: absolute;
     top: 0;
     left: 0;
@@ -397,13 +404,16 @@ button {
     border-left: 1px solid #e7e9fc;
     border-right: 1px solid #e7e9fc;
     padding: 32px 16px;
+}
+
+.portfolio-list-item {
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover .portfolio-list-item-text,
-.portfolio-list-item:focus .portfolio-list-item-text {
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
@@ -432,7 +442,11 @@ button {
 
 .footer-container {
     display: flex;
-    gap: 120px;
+    align-items: baseline;
+}
+
+.container-about-footer {
+    margin-right: 120px;
 }
 
 .footer-logo {
@@ -462,19 +476,19 @@ button {
 
 .footer-social-list {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     justify-content: center;
 }
 
 .footer-social-list svg {
     display: block;
-    width: 24px;
-    height: 24px;
     fill: #f4f4fd;
 }
 
 .footer-social-list a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #4d5ae5;
     border-radius: 50%;
     padding: 8px;
